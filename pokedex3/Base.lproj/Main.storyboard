@@ -8,6 +8,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="pokemon.ttf">
+            <string>PokemonSolidNormal</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -23,8 +28,30 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6TT-yI-zPu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zT-09-POU">
+                                        <rect key="frame" x="84" y="16" width="207" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="34"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGI-VG-nk5">
+                                        <rect key="frame" x="331" y="24" width="36" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="Pxv-Bt-iNX"/>
+                                            <constraint firstAttribute="width" constant="36" id="xfi-Qc-Pft"/>
+                                        </constraints>
+                                        <state key="normal" image="music.png"/>
+                                        <connections>
+                                            <action selector="MusicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YJQ-h9-LtV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.34509803921568627" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="KGI-VG-nk5" secondAttribute="trailing" constant="8" id="7CT-Vu-gXd"/>
+                                    <constraint firstAttribute="bottom" secondItem="KGI-VG-nk5" secondAttribute="bottom" constant="8" id="OOe-aV-tRc"/>
                                     <constraint firstAttribute="height" constant="65" id="Qa4-k3-6QX"/>
                                 </constraints>
                             </view>
@@ -107,16 +134,18 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="SearchBar" destination="EpT-x0-zMC" id="Eko-bm-aBc"/>
                         <outlet property="collection" destination="n7u-eu-RpX" id="YoY-IP-vSY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+            <point key="canvasLocation" x="696.79999999999995" y="1.3493253373313345"/>
         </scene>
     </scenes>
     <resources>
         <image name="4" width="120" height="120"/>
         <image name="bg" width="1920" height="1200"/>
+        <image name="music.png" width="100" height="100"/>
     </resources>
 </document>
